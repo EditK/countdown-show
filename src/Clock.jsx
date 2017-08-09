@@ -18,6 +18,10 @@ class Clock extends Component {
 
     componentDidMount() {
         setInterval(() => this.getTimeUntil(this.props.deadline), 1000);
+        // stopwatch assignment
+        if (this.state.days === 0 && this.state.hours === 0 && this.state.minutes === 0 && this.state.seconds === 0) {
+            return alert("Yaay");
+        }
     }
 
     leading0(num){
